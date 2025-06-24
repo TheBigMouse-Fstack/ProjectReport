@@ -1,0 +1,295 @@
+:root {
+  --main: #223049;
+  --main2: #2563eb;
+  --main3: #8b5cf6;
+}
+.khanh-text,
+.assign-badge.fe {
+  color: #2563eb !important;
+  font-weight: 600;
+}
+.chau-text,
+.assign-badge.chau {
+  color: #8b5cf6 !important;
+  font-weight: 600;
+}
+.quan-text,
+.assign-badge.quan {
+  color: #06b6d4 !important;
+  font-weight: 600;
+}
+.an-text,
+.assign-badge.an {
+  color: #fb923c !important;
+  font-weight: 600;
+}
+.done-text {
+  color: #22c55e !important;
+  font-weight: 700;
+}
+
+/* === BASE === */
+body {
+  font-family: "Inter", sans-serif;
+  background: #f7f9fd;
+  color: var(--main);
+}
+
+/* === NAVBAR SHRINK EFFECT === */
+.navbar {
+  background: #fff;
+  border-bottom: 1.5px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  width: 100%;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.navbar-inner {
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 0;
+  box-shadow: none;
+  background: #fff;
+  padding: 1.5rem; /* p-6 */
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.navbar-inner.shrunk {
+  max-width: 80rem; /* max-w-7xl */
+  border-radius: 1.5rem; /* rounded-2xl */
+  margin-top: 1rem;
+  background: #fff;
+  box-shadow: 0 12px 32px #22304922, 0 2px 8px #22304914;
+  padding-top: 0.75rem; /* p-3 */
+  padding-bottom: 0.75rem;
+  padding-left: 2.25rem; /* px-9 */
+  padding-right: 2.25rem;
+}
+@media (max-width: 1024px) {
+  .navbar-inner,
+  .navbar-inner.shrunk {
+    max-width: 100%;
+    border-radius: 1rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+/* === FEATURE TABLE & BADGES === */
+.group-count {
+  background: var(--main);
+  color: #fff;
+  border-radius: 999px;
+  padding: 2px 14px;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+.assign-badge.fe {
+  background: #dbeafe;
+  color: #2563eb;
+  border-radius: 6px;
+  padding: 2px 12px;
+  font-size: 13px;
+}
+.assign-badge.be {
+  background: #ede9fe;
+  color: #7c3aed;
+  border-radius: 6px;
+  padding: 2px 12px;
+  font-size: 13px;
+}
+.assign-badge.qa {
+  background: #fce7f3;
+  color: #be185d;
+  border-radius: 6px;
+  padding: 2px 12px;
+  font-size: 13px;
+}
+.feature-table th {
+  background: var(--main);
+  color: #fff;
+  font-weight: 600;
+  text-align: left;
+  padding: 13px 14px;
+  font-size: 16px;
+}
+.feature-table td {
+  padding: 13px 14px;
+  font-size: 15px;
+  border-bottom: 1.5px solid #e5e7eb;
+}
+.feature-table tr:last-child td {
+  border-bottom: none;
+}
+.feature-group.expanded {
+  box-shadow: 0 10px 32px #2563eb18, 0 2px 8px #2563eb11;
+  border-color: #2563eb33;
+}
+.toggle-icon {
+  transition: all 0.2s;
+}
+
+/* === CARD GRADIENT === */
+.card-gradient {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+}
+
+/* === TEAM CARD HOVER EFFECT (FETCH DOCTOR STYLE) === */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.75rem;
+}
+@media (min-width: 640px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.custom-team-card {
+  position: relative;
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 20px #2230490b;
+  overflow: hidden;
+  min-height: 380px;
+  cursor: pointer;
+  transition: all 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+.custom-team-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 1rem;
+  transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.team-hover-content-soft {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, #223049cc 70%, transparent 100%);
+  color: #fff;
+  padding: 1.4rem 1.3rem 1rem 1.3rem;
+  min-height: 30%;
+  /* Ẩn hoàn toàn khi chưa hover */
+  opacity: 0;
+  transform: translateY(45%);
+  pointer-events: none;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.33s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+.custom-team-card:hover .team-hover-content-soft {
+  opacity: 1;
+  transform: translateY(0%);
+  pointer-events: auto;
+}
+
+.custom-team-card:hover .team-hover-content-soft {
+  transform: translateY(0%);
+  opacity: 1;
+  pointer-events: auto;
+}
+.custom-team-card:hover img {
+  transform: scale(1.045);
+}
+.team-hover-content-soft h3 {
+  margin: 0 0 0.2em 0;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+.team-hover-content-soft .role {
+  font-size: 0.98rem;
+  opacity: 0.86;
+  margin-bottom: 0.3rem;
+}
+.team-hover-content-soft .badge-row {
+  margin-top: 0.15rem;
+  margin-bottom: 0.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.team-hover-content-soft .desc {
+  margin-top: 0.55rem;
+  font-size: 0.96rem;
+  line-height: 1.3;
+  opacity: 0.93;
+}
+
+/* GROUP HOVER EFFECT: làm mờ & scale nhỏ các card chưa được hover */
+.team-grid:hover .custom-team-card:not(:hover) {
+  opacity: 0.42;
+  filter: blur(1.5px) grayscale(32%);
+  transform: scale(0.96);
+  z-index: 0;
+}
+.team-grid .custom-team-card:hover {
+  z-index: 10;
+  box-shadow: 0 16px 40px #22304921;
+  opacity: 1 !important;
+  filter: none;
+  transform: scale(1.07);
+}
+
+/* Optional: smooth badge, role color */
+.team-hover-content-soft .fe {
+  background: #2563ebcc;
+  color: #fff;
+}
+.team-hover-content-soft .be {
+  background: #8b5cf6cc;
+  color: #fff;
+}
+.team-hover-content-soft .qa {
+  background: #f9a8d4cc;
+  color: #fff;
+}
+
+/* === SCROLLBAR CUSTOM === */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #2563eb 0%, #8b5cf6 100%);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #f4f6fb;
+}
+.fe-row {
+  background: #dbeafe1a; /* Xanh nhạt (blue-100, opacity ~10%) */
+  transition: background 0.18s;
+}
+.be-row {
+  background: #ede9fe1a; /* Tím nhạt (violet-100, opacity ~10%) */
+  transition: background 0.18s;
+}
+.qa-row {
+  background: #fce7f31a; /* Hồng nhạt (pink-100, opacity ~10%) */
+  transition: background 0.18s;
+}
+.done {
+  background: #bbf7d012 !important; /* Lục nhạt rất nhẹ (green-100, opacity ~7%) */
+}
+.done td {
+  color: #1d9a6a !important; /* Chữ xanh nhẹ cho tr "done" */
+}
+.feature-table tr.done .assign-badge {
+  box-shadow: 0 0 0 2px #bbf7d088;
+  font-weight: 700;
+}
+.feature-table td:last-child,
+.feature-table th:last-child {
+  text-align: center;
+}
