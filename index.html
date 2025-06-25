@@ -34,65 +34,212 @@
     </nav>
 
     <main class="max-w-7xl mx-auto px-4 mt-32">
-      <!-- OVERVIEW -->
-      <section id="overview" class="mb-20 text-center">
-        <h1
-          class="text-4xl font-extrabold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-[#223049] via-blue-800 to-purple-800"
+      <section id="overview" class="mb-28 max-w-7xl mx-auto px-4">
+        <!-- ANIMATED HEADLINE -->
+        <div class="relative text-center mb-16">
+          <h1
+            class="text-5xl font-extrabold tracking-tight mb-5"
+            style="
+              background: linear-gradient(
+                90deg,
+                #223049,
+                #2563eb,
+                #7c3aed,
+                #223049
+              );
+              background-size: 200% 100%;
+              background-clip: text;
+              -webkit-background-clip: text;
+              color: transparent;
+              animation: gradientMove 6s linear infinite alternate;
+              letter-spacing: 0.02em;
+            "
+          >
+            Project Overview
+          </h1>
+          <!-- UNDERLINE chạy ngang -->
+          <span
+            class="absolute left-1/2 -translate-x-1/2"
+            style="
+              display: block;
+              height: 4px;
+              width: 210px;
+              background: linear-gradient(90deg, #223049 60%, #7c3aed 100%);
+              border-radius: 999px;
+              overflow: hidden;
+              margin-top: -5px;
+              position: relative;
+            "
+          >
+            <span
+              style="
+                display: block;
+                height: 100%;
+                width: 35%;
+                background: linear-gradient(
+                  90deg,
+                  transparent,
+                  #2563eb,
+                  transparent
+                );
+                animation: underlineRun 2.5s linear infinite;
+                border-radius: 999px;
+                opacity: 0.7;
+                position: absolute;
+                left: 0;
+                top: 0;
+              "
+            ></span>
+          </span>
+        </div>
+
+        <!-- WHAT BLOCK -->
+        <div
+          class="relative bg-white rounded-xl pl-8 pr-8 py-9 mb-16 border-l-4"
+          style="border-color: #223049"
         >
-          Project Overview
-        </h1>
-        <p class="text-lg text-gray-600 mb-7 max-w-2xl mx-auto">
-          A digital transformation platform for clinics: taking everything from
-          offline to online. We help clinics manage customers, doctors,
-          appointments, services, and payments — all in one place!
-        </p>
-        <div class="grid md:grid-cols-3 gap-8 mt-10">
-          <!-- WHAT -->
-          <div class="card-gradient p-7 rounded-2xl shadow">
-            <h2 class="font-bold text-xl mb-2" style="color: #2563eb">
-              What are we building?
-            </h2>
-            <p class="text-gray-700 leading-relaxed">
-              This project delivers <b>two websites</b>:<br />
-              - <b>Frontend</b> for clinic customers: book appointments, view
-              services, find doctors, manage personal profiles.<br />
-              - <b>Backend</b> for clinic staff/admins: manage bookings, patient
-              records, revenue, and promote the clinic brand.<br />
-              In short: We digitize all the workflow of a traditional offline
-              clinic and bring it fully online.
-            </p>
-          </div>
-          <!-- WHY -->
-          <div class="card-gradient p-7 rounded-2xl shadow">
-            <h2 class="font-bold text-xl mb-2" style="color: #2563eb">
-              Why does it matter?
-            </h2>
-            <p class="text-gray-700 leading-relaxed">
-              - <b>Empowers clinics</b> to fully embrace digital, reaching more
-              clients anytime, anywhere.<br />
-              - <b>Clients</b> can book appointments in seconds — no more
-              waiting in line.<br />
-              - Streamlines management, cuts paperwork, reduces mistakes.<br />
-              - Boosts business: higher revenue, better brand recognition, and
-              smarter operations.
-            </p>
-          </div>
-          <!-- WHO -->
-          <div class="card-gradient p-7 rounded-2xl shadow">
-            <h2 class="font-bold text-xl mb-2" style="color: #2563eb">
-              Who is it for?
-            </h2>
-            <p class="text-gray-700 leading-relaxed">
-              <b>1. Clients/Patients:</b> Gen Z, Millennials, or anyone who
-              wants fast and convenient online clinic services.<br />
-              <b>2. Clinic owners & staff:</b> Admins, receptionists, doctors
-              who use the backend to manage operations, serve clients, and grow
-              their business.<br />
-              <b>3. Dev Team:</b> A passionate group of PTIT computer
-              engineering students, committed to real-world tech solutions.
-            </p>
+          <!-- floating SVG geom shape -->
+          <svg
+            class="absolute right-6 top-6 opacity-10"
+            width="60"
+            height="60"
+            viewBox="0 0 48 48"
+            fill="none"
+          >
+            <circle cx="24" cy="24" r="22" stroke="#223049" stroke-width="2" />
+          </svg>
+          <h2
+            class="text-3xl font-bold mb-3"
+            style="color: #223049; letter-spacing: 0.01em"
+          >
+            What are we building?
+          </h2>
+          <div class="text-gray-800 text-lg leading-relaxed">
+            This project delivers <b>two websites</b>:<br />
+            <span class="inline-block mt-2"
+              >• <b>Frontend:</b> For clinic customers: book appointments, view
+              services, find doctors, manage personal profiles.</span
+            ><br />
+            <span class="inline-block"
+              >• <b>Backend:</b> For clinic staff/admins: manage bookings,
+              patient records, revenue, and promote the clinic brand.</span
+            ><br />
+            <span class="block mt-3 font-medium text-[#223049]"
+              >In short: Digitizing all workflow of a traditional clinic,
+              bringing it fully online.</span
+            >
           </div>
         </div>
+
+        <!-- WHY BLOCK -->
+        <div
+          class="relative bg-white rounded-xl pl-8 pr-8 py-9 mb-16 border-l-4"
+          style="border-color: #223049"
+        >
+          <svg
+            class="absolute right-6 top-6 opacity-10"
+            width="60"
+            height="60"
+            viewBox="0 0 48 48"
+            fill="none"
+          >
+            <rect
+              x="7"
+              y="7"
+              width="34"
+              height="34"
+              rx="7"
+              stroke="#223049"
+              stroke-width="2"
+            />
+          </svg>
+          <h2
+            class="text-3xl font-bold mb-3"
+            style="color: #223049; letter-spacing: 0.01em"
+          >
+            Why does it matter?
+          </h2>
+          <ul
+            class="text-gray-800 text-lg leading-relaxed list-disc list-inside ml-2"
+          >
+            <li>
+              <b>Empowers clinics</b> to fully embrace digital, reaching more
+              clients anytime, anywhere.
+            </li>
+            <li>
+              <b>Clients</b> can book appointments in seconds — no more waiting
+              in line.
+            </li>
+            <li>Streamlines management, cuts paperwork, reduces mistakes.</li>
+            <li>
+              Boosts business: higher revenue, better brand recognition, and
+              smarter operations.
+            </li>
+          </ul>
+        </div>
+
+        <!-- WHO BLOCK -->
+        <div
+          class="relative bg-white rounded-xl pl-8 pr-8 py-9 border-l-4"
+          style="border-color: #223049"
+        >
+          <svg
+            class="absolute right-6 top-6 opacity-10"
+            width="60"
+            height="60"
+            viewBox="0 0 48 48"
+            fill="none"
+          >
+            <polygon
+              points="24,7 41,41 7,41"
+              stroke="#223049"
+              stroke-width="2"
+              fill="none"
+            />
+          </svg>
+          <h2
+            class="text-3xl font-bold mb-3"
+            style="color: #223049; letter-spacing: 0.01em"
+          >
+            Who is it for?
+          </h2>
+          <div class="text-gray-800 text-lg leading-relaxed space-y-3">
+            <div>
+              <b>1. Clients/Patients:</b>
+              Gen Z, Millennials, or anyone who wants fast and convenient online
+              clinic services.
+            </div>
+            <div>
+              <b>2. Clinic owners & staff:</b>
+              Admins, receptionists, doctors who use the backend to manage
+              operations, serve clients, and grow their business.
+            </div>
+            <div>
+              <b>3. Dev Team:</b>
+              A passionate group of PTIT computer engineering students,
+              committed to real-world tech solutions.
+            </div>
+          </div>
+        </div>
+
+        <style>
+          @keyframes gradientMove {
+            0% {
+              background-position: 0% 50%;
+            }
+            100% {
+              background-position: 100% 50%;
+            }
+          }
+          @keyframes underlineRun {
+            0% {
+              left: 0;
+            }
+            100% {
+              left: 70%;
+            }
+          }
+        </style>
       </section>
 
       <!-- TEAM SECTION -->

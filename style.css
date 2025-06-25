@@ -3,6 +3,10 @@
   --main2: #2563eb;
   --main3: #8b5cf6;
 }
+.bg-gradient-to-l {
+  background: linear-gradient(to left, #f6f9ff, #fff 50%);
+}
+
 .khanh-text,
 .assign-badge.fe {
   color: #2563eb !important;
