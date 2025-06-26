@@ -46,3 +46,15 @@ document.querySelectorAll('nav a[href^="#"]').forEach((anchor) => {
     }
   });
 });
+document.getElementById("btn1").onclick = function (e) {
+  // Ngăn sự kiện mặc định nếu nhấn vào nút
+  e.preventDefault();
+  window.open(
+    "https://github.com/bunpmc/Gender-Healthcare-Service-Management-System",
+    "_blank"
+  );
+};
+document.getElementById("btn2").onclick = function (e) {
+  e.preventDefault();
+  window.open("https://github.com/bunpmc/Repo2", "_blank");
+};
